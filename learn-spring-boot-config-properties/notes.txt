@@ -1,0 +1,5 @@
+Running spring boot with external configuration file
+> java -jar your.jar --spring.config.location=application.properties
+
+Running spring boot with active profile
+> java -jar your.jar --spring.profiles.active=prod,dev

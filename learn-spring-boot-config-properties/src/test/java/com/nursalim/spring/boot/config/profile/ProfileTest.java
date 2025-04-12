@@ -18,7 +18,7 @@ public class ProfileTest {
 
     @Test
     void testProfile() {
-        Assertions.assertEquals("Hello Nursalim from local", sayHello.say("Nursalim"));
+        Assertions.assertEquals("Hello Nursalim from production", sayHello.say("Nursalim"));
     }
 
     @Component

@@ -1,0 +1,4 @@
+application:
+  name: Learn Spring Boot Config with yaml
+  version: 2
+  production-mode: true
