@@ -1,0 +1,6 @@
+POST http://localhost:8081/api/person
+Content-Type: application/json
+Accept: application/json
+{
+"firstName":"Nursalim"
+}
