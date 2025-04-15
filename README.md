@@ -5,3 +5,4 @@ Contents:
 3. Spring Boot Logging
 4. Spring Boot Validation
 5. Spring Boot AOP
+6. Spring Boot Web MVC
