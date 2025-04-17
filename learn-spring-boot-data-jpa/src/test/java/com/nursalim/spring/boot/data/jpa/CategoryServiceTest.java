@@ -33,4 +33,11 @@ public class CategoryServiceTest {
             categoryService.createCategory();
         });
     }
+
+    @Test
+    void testManual() {
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            categoryService.manual();
+        });
+    }
 }
