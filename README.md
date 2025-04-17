@@ -6,3 +6,4 @@ Contents:
 4. Spring Boot Validation
 5. Spring Boot AOP
 6. Spring Boot Web MVC
+7. Spring Boot Data JPA
