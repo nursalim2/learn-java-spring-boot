@@ -2,6 +2,7 @@ package com.nursalim.spring.boot.restful.api.service;
 
 import com.nursalim.spring.boot.restful.api.entity.User;
 import com.nursalim.spring.boot.restful.api.model.RegisterUserRequest;
+import com.nursalim.spring.boot.restful.api.model.UpdateUserRequest;
 import com.nursalim.spring.boot.restful.api.model.UserResponse;
 import com.nursalim.spring.boot.restful.api.repository.UserRepository;
 import com.nursalim.spring.boot.restful.api.security.BCrypt;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Service
@@ -53,5 +55,24 @@ public class UserService {
                 .build();
     }
 
+    @Transactional
+    public UserResponse update(User user, UpdateUserRequest request) {
+        validationService.validate(request);
+
+        if (Objects.nonNull(request.getName())) {
+            user.setName(request.getName());
+        }
+
+        if (Objects.nonNull(request.getPassword())) {
+            user.setPassword(BCrypt.hashpw(request.getPassword(), BCrypt.gensalt()));
+        }
+
+        userRepository.save(user);
+
+        return UserResponse.builder()
+                .name(user.getName())
+                .username(user.getUsername())
+                .build();
+    }
 
 }
