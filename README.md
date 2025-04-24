@@ -8,3 +8,4 @@ Contents:
 6. Spring Boot Web MVC
 7. Spring Boot Data JPA
 8. Spring Restful API
+9. Spring Boot Monitoring
