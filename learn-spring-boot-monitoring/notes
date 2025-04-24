@@ -1,0 +1,53 @@
+Beans
+------------
+/actuator/beans
+
+
+
+Health
+---------------
+/actuator/health
+
+
+
+Info
+-----------------
+/actuator/info
+
+
+
+Configuration Properties
+-----------------------
+/actuator/configprops
+
+
+Environment Variables
+----------------------
+/actuator/env
+
+
+
+Logger
+----------------------
+/actuator/loggers
+
+
+Heap Dump
+------------------------
+/actuator/heapdump
+
+
+
+Thread Dump
+----------------------
+/actuator/threaddump
+
+
+Scheduled Task
+-----------------
+/actuator/scheduledtasks
+
+
+Metric
+---------------------
+/actuator/metrics
